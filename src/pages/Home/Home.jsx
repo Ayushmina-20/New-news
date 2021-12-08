@@ -26,6 +26,7 @@ const Home = () => {
   const [categories, setCategories] = useState([]);
   const [company, setCompany] = useState("");
   const [catdata, setCatdata] = useState([]);
+  const [positiveCatData, setPositiveCatData] = useState([]);
   console.log(company);
 
   useEffect(() => {
@@ -122,6 +123,8 @@ const Home = () => {
     });
     setFilterData(filteredYearData);
   }, [allData, checkedCategoryList]);
+  console.log(catdata.filter((item) => item?.sentiment === "POSITIVE").length);
+  console.log(catdata.length);
 
   return (
     <>
@@ -139,14 +142,25 @@ const Home = () => {
         />
 
         <div className="home">
-          <FeaturedNews positive={positive} negative={negative} />
+          <FeaturedNews
+            positive={
+              catdata.filter((item) => item?.sentiment === "POSITIVE").length
+            }
+            negative={
+              catdata.filter((item) => item?.sentiment === "NEGATIVE").length
+            }
+          />
           <Chart
             data={charData}
             title=" "
             grid
             dataKey="Data"
-            positive={positive}
-            negative={negative}
+            positive={
+              catdata.filter((item) => item?.sentiment === "POSITIVE").length
+            }
+            negative={
+              catdata.filter((item) => item?.sentiment === "NEGATIVE").length
+            }
           />
           <div className="homeWidgets">
             {!!company.length ? (
