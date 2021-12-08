@@ -126,7 +126,7 @@ const Home = () => {
   return (
     <>
       <Topbar />
-      <div className="App-container">
+      <div className="container w-100">
         <Sidebar
           setSelectedYearData={setSelectedYear}
           checkedMonthList={checkedMonthList}

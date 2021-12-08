@@ -47,12 +47,12 @@ export default function WidgetLg({ filteredData }) {
             return (
               <Card className="card" key={index}>
                 <Card.Img
+                  style={{ width: "70%" }}
                   variant="top"
                   className="image-card"
                   src={curr.news_image}
                 />
-                <Card.Body style={{ overflowY: "auto" }}>
-                  <Card.Title>News Title</Card.Title>
+                <Card.Body style={{ overflowY: "auto", width: "70%" }}>
                   <Card.Text>{curr.news_headline}</Card.Text>
                   {/* <Button variant="primary">Go somewhere</Button> */}
                 </Card.Body>

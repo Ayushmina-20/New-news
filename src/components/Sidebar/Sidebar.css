@@ -3,14 +3,12 @@
 
   display: flex;
   width: 20%;
-
-  height: 80vh;
 }
 .sidebarWrapper {
   padding: 10px;
   color: #222;
   transition: all 0.3s ease-out;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .sidebarMenu {
