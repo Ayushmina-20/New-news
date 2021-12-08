@@ -1,0 +1,15 @@
+.home {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.homeWidgets {
+  display: flex;
+  margin: 20px;
+  width: 90%;
+  height: 300px;
+}
+.homeFooter {
+  display: flex;
+  width: 90%;
+}

@@ -1,0 +1,20 @@
+.widgetLg {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+/* .cards {
+  height: 50%;
+  width: 50%;
+} */
+
+.card {
+  width: 250px !important;
+  height: 300px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.image-card {
+  height: 120px;
+}
