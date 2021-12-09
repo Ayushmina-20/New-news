@@ -144,10 +144,18 @@ const Home = () => {
         <div className="home">
           <FeaturedNews
             positive={
-              catdata.filter((item) => item?.sentiment === "POSITIVE").length
+              !!company.length
+                ? catdata.filter((item) => item?.sentiment === "POSITIVE")
+                    .length
+                : filteredData.filter((item) => item?.label === "POSITIVE")
+                    .length
             }
             negative={
-              catdata.filter((item) => item?.sentiment === "NEGATIVE").length
+              !!company.length
+                ? catdata.filter((item) => item?.sentiment === "NEGATIVE")
+                    .length
+                : filteredData.filter((item) => item?.label === "NEGATIVE")
+                    .length
             }
           />
           <Chart
@@ -156,10 +164,18 @@ const Home = () => {
             grid
             dataKey="Data"
             positive={
-              catdata.filter((item) => item?.sentiment === "POSITIVE").length
+              !!company.length
+                ? catdata.filter((item) => item?.sentiment === "POSITIVE")
+                    .length
+                : filteredData.filter((item) => item?.label === "POSITIVE")
+                    .length
             }
             negative={
-              catdata.filter((item) => item?.sentiment === "NEGATIVE").length
+              !!company.length
+                ? catdata.filter((item) => item?.sentiment === "NEGATIVE")
+                    .length
+                : filteredData.filter((item) => item?.label === "NEGATIVE")
+                    .length
             }
           />
           <div className="homeWidgets">
